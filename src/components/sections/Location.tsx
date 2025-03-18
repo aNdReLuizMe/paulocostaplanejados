@@ -122,7 +122,7 @@ export const Location: FC = () => {
                                         <h3 className="font-semibold text-gray-900 mb-1">Contato</h3>
                                         <p className="text-gray-600">
                                             (67) 99114-6889<br />
-                                            contato@pcplanejados.com.br
+                                            contato@paulocostaplanejados.com.br
                                         </p>
                                     </div>
                                 </div>

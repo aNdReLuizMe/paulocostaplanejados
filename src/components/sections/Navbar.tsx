@@ -44,6 +44,20 @@ export function NavbarApp(): JSX.Element {
         }
     };
 
+    // Função para determinar a direção do hover baseado na seção ativa
+    const getHoverDirection = (targetSection: string): string => {
+        const sections = ['home', 'about', 'portfolio', 'location'];
+        const activeIndex = sections.indexOf(activeSection);
+        const targetIndex = sections.indexOf(targetSection);
+        
+        // Se for a mesma seção, não aplica hover
+        if (activeIndex === targetIndex) return '';
+        
+        // Se o target está à direita da seção ativa = hover da esquerda para direita
+        // Se o target está à esquerda da seção ativa = hover da direita para esquerda
+        return targetIndex > activeIndex ? 'left-to-right' : 'right-to-left';
+    };
+
     return (
         <Navbar className="h-20 shadow-lg fixed top-0 w-full z-50 bg-white flex items-center">
             <Navbar.Brand className="flex items-center">
@@ -64,11 +78,19 @@ export function NavbarApp(): JSX.Element {
                             e.preventDefault();
                             scrollToSection('home');
                         }}
-                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 ${
+                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 relative group ${
                             activeSection === 'home' ? 'text-blue-600' : ''
                         }`}
                     >
                         Home
+                        {activeSection === 'home' && (
+                            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
+                        )}
+                        {activeSection !== 'home' && (
+                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
+                                getHoverDirection('home') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            }`}></span>
+                        )}
                     </a>
                     <a
                         href="#about"
@@ -76,11 +98,19 @@ export function NavbarApp(): JSX.Element {
                             e.preventDefault();
                             scrollToSection('about');
                         }}
-                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 ${
+                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 relative group ${
                             activeSection === 'about' ? 'text-blue-600' : ''
                         }`}
                     >
                         Quem Somos
+                        {activeSection === 'about' && (
+                            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
+                        )}
+                        {activeSection !== 'about' && (
+                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
+                                getHoverDirection('about') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            }`}></span>
+                        )}
                     </a>
                     <a
                         href="#portfolio"
@@ -88,11 +118,19 @@ export function NavbarApp(): JSX.Element {
                             e.preventDefault();
                             scrollToSection('portfolio');
                         }}
-                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 ${
+                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 relative group ${
                             activeSection === 'portfolio' ? 'text-blue-600' : ''
                         }`}
                     >
                         Nossos Trabalhos
+                        {activeSection === 'portfolio' && (
+                            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
+                        )}
+                        {activeSection !== 'portfolio' && (
+                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
+                                getHoverDirection('portfolio') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            }`}></span>
+                        )}
                     </a>
                     <a
                         href="#location"
@@ -100,11 +138,19 @@ export function NavbarApp(): JSX.Element {
                             e.preventDefault();
                             scrollToSection('location');
                         }}
-                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 ${
+                        className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 relative group ${
                             activeSection === 'location' ? 'text-blue-600' : ''
                         }`}
                     >
                         Localização
+                        {activeSection === 'location' && (
+                            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
+                        )}
+                        {activeSection !== 'location' && (
+                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
+                                getHoverDirection('location') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            }`}></span>
+                        )}
                     </a>
                     <a
                         href="https://wa.me/5567991146889"

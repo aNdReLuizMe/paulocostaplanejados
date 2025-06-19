@@ -29,17 +29,7 @@ export function TestimonialApp() {
                 </div>
             </figcaption>
             
-            {/* Call to Action */}
-            <div className="mt-6 sm:mt-8">
-                <a
-                    href="https://wa.me/5567991146889?text=Olá! Gostaria de conhecer mais sobre os móveis planejados da Paulo Costa."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg text-sm whitespace-nowrap"
-                >
-                    Seja bem vindo!
-                </a>
-            </div>
+
         </figure>
     );
 }

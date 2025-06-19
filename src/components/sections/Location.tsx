@@ -142,17 +142,7 @@ export const Location: FC = () => {
                                 </div>
                             </div>
 
-                            {/* Botões CTA */}
-                            <div className="pt-4 flex justify-center">
-                                <a
-                                    href="https://wa.me/5567991146889?text=Olá! Gostaria de agendar uma visita para conhecer a loja e discutir meu projeto de móveis planejados."
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg text-sm whitespace-nowrap"
-                                >
-                                    Agende uma Visita
-                                </a>
-                            </div>
+
                         </div>
                     </motion.div>
                 </div>

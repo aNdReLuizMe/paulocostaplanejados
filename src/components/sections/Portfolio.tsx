@@ -75,17 +75,7 @@ export function Portfolio(): JSX.Element {
                     </LightGallery>
                 </div>
 
-                {/* Botão Call to Action */}
-                <div className="text-center">
-                    <a
-                        href="https://wa.me/5567991146889?text=Olá! Gostaria de solicitar um orçamento para móveis planejados."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg text-sm whitespace-nowrap"
-                    >
-                        Faça um orçamento
-                    </a>
-                </div>
+
             </div>
         </div>
     );

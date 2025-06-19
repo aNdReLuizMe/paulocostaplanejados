@@ -53,7 +53,7 @@ export function FloatingWhatsApp(): JSX.Element {
                 role="tooltip"
                 aria-hidden="true"
             >
-                💬 Solicite seu orçamento gratuito
+                💬 Converse conosco
                 {/* Seta do tooltip */}
                 <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-green-600"></div>
             </div>

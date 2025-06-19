@@ -15,10 +15,10 @@ export function FloatingWhatsApp(): JSX.Element {
     return (
         <div className="fixed bottom-6 right-6 z-50 group">
             {/* Tooltip */}
-            <div className="absolute bottom-full right-0 mb-3 px-3 py-2 bg-green-600 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none floating-bounce">
-                Converse conosco em nosso Whats
+            <div className="absolute bottom-full right-1/2 transform translate-x-1/2 mb-3 px-3 py-2 bg-green-600 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none floating-bounce">
+                Converse com a gente
                 {/* Seta do tooltip */}
-                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-green-600"></div>
+                <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-green-600"></div>
             </div>
             
             <a

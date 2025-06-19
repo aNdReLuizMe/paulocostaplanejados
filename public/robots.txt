@@ -1,16 +1,89 @@
+# Robots.txt para Paulo Costa Planejados
+# Otimizado para máximo SEO e indexação
+
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap principal
 Sitemap: https://aNdReLuizMe.github.io/paulocostaplanejados/sitemap.xml
 
-# Diretórios principais
+# Diretórios e recursos permitidos
 Allow: /assets/
 Allow: /images/
 Allow: /logo/
+Allow: /favicon-nobg.svg
+Allow: /manifest.json
 
-# Crawl-delay (opcional, ajuda sites menores)
+# Bloquear arquivos de desenvolvimento e configuração
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.config.js$
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /README.md
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /dist/
+
+# Permitir bots específicos
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
 
-# Prioridades para SEO local
-# Palavras-chave importantes: móveis planejados, Três Lagoas, MS, marcenaria, móveis sob medida 
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Bloquear bots maliciosos
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MajesticSEO
+Disallow: /
+
+# Crawl-delay global padrão
+Crawl-delay: 1
+
+# Host preferido (canonical)
+Host: aNdReLuizMe.github.io
+
+# Informações importantes para motores de busca
+# Keywords principais: móveis planejados, Três Lagoas, MS, marcenaria, móveis sob medida
+# Localização: Três Lagoas, Mato Grosso do Sul, Brasil
+# Contato: +55 67 99114-6889 

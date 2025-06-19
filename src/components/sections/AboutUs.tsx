@@ -168,8 +168,7 @@ export function AboutUs(): JSX.Element {
                         <Counter end={20} label="Anos de Experiência" />
                         <Counter end={200} label="Projetos Realizados" />
                         <Counter end={100} label="Clientes Satisfeitos" />
-                    </div>
-                    
+                    </div>                    
 
                 </motion.div>
             </motion.div>

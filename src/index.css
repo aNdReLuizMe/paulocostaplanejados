@@ -87,4 +87,28 @@
   .skeleton {
     @apply animate-pulse bg-gray-200 rounded;
   }
+
+  /* Hover direcionado para navbar - esquerda para direita */
+  .hover-left-to-right {
+    width: 0%;
+    transform-origin: left;
+    transition: none;
+  }
+  
+  .hover-left-to-right:hover {
+    width: 100%;
+    transition: width 0.3s ease-out;
+  }
+
+  /* Hover direcionado para navbar - direita para esquerda */
+  .hover-right-to-left {
+    width: 0%;
+    transform-origin: right;
+    transition: none;
+  }
+  
+  .hover-right-to-left:hover {
+    width: 100%;
+    transition: width 0.3s ease-out;
+  }
 }

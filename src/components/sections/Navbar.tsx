@@ -87,8 +87,8 @@ export function NavbarApp(): JSX.Element {
                             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
                         )}
                         {activeSection !== 'home' && (
-                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
-                                getHoverDirection('home') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            <span className={`absolute bottom-0 h-1 bg-blue-400 rounded-full ${
+                                getHoverDirection('home') === 'left-to-right' ? 'left-0 hover-left-to-right' : 'right-0 hover-right-to-left'
                             }`}></span>
                         )}
                     </a>
@@ -107,8 +107,8 @@ export function NavbarApp(): JSX.Element {
                             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
                         )}
                         {activeSection !== 'about' && (
-                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
-                                getHoverDirection('about') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            <span className={`absolute bottom-0 h-1 bg-blue-400 rounded-full ${
+                                getHoverDirection('about') === 'left-to-right' ? 'left-0 hover-left-to-right' : 'right-0 hover-right-to-left'
                             }`}></span>
                         )}
                     </a>
@@ -127,8 +127,8 @@ export function NavbarApp(): JSX.Element {
                             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
                         )}
                         {activeSection !== 'portfolio' && (
-                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
-                                getHoverDirection('portfolio') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            <span className={`absolute bottom-0 h-1 bg-blue-400 rounded-full ${
+                                getHoverDirection('portfolio') === 'left-to-right' ? 'left-0 hover-left-to-right' : 'right-0 hover-right-to-left'
                             }`}></span>
                         )}
                     </a>
@@ -147,8 +147,8 @@ export function NavbarApp(): JSX.Element {
                             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-full transform transition-all duration-300"></span>
                         )}
                         {activeSection !== 'location' && (
-                            <span className={`absolute bottom-0 w-0 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-full ${
-                                getHoverDirection('location') === 'left-to-right' ? 'left-0 group-hover:left-0' : 'right-0 group-hover:right-0'
+                            <span className={`absolute bottom-0 h-1 bg-blue-400 rounded-full ${
+                                getHoverDirection('location') === 'left-to-right' ? 'left-0 hover-left-to-right' : 'right-0 hover-right-to-left'
                             }`}></span>
                         )}
                     </a>

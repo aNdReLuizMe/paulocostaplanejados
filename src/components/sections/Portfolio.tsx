@@ -19,54 +19,74 @@ import Image40 from "../../assets/images/carousel/Image (40).jpeg";
 import Image46 from "../../assets/images/carousel/Image (46).jpeg";
 import Image51 from "../../assets/images/carousel/Image (51).jpeg";
 import Image54 from "../../assets/images/carousel/Image (54).jpeg";
-import Image61 from "../../assets/images/carousel/Image (61).jpeg";// Adicione mais imagens conforme necessário
+import Image61 from "../../assets/images/carousel/Image (61).jpeg";
 
 export function Portfolio(): JSX.Element {
     const images = [
-        { src: Image54, thumb: Image54, alt: 'Móvel Planejado 1' },
-        { src: Image2, thumb: Image2, alt: 'Móvel Planejado 2' },
-        { src: Image31, thumb: Image31, alt: 'Móvel Planejado 3' },
-        { src: Image37, thumb: Image37, alt: 'Móvel Planejado 4' },
-        { src: Image40, thumb: Image40, alt: 'Móvel Planejado 5' },
-        { src: Image46, thumb: Image46, alt: 'Móvel Planejado 6' },
-        { src: Image51, thumb: Image51, alt: 'Móvel Planejado 7' },
-        { src: Image61, thumb: Image61, alt: 'Móvel Planejado 8' },
+        { src: Image54, thumb: Image54, alt: 'Cozinha Planejada - Móveis sob medida' },
+        { src: Image2, thumb: Image2, alt: 'Dormitório Planejado - Guarda-roupa personalizado' },
+        { src: Image31, thumb: Image31, alt: 'Escritório Planejado - Mesa e estantes' },
+        { src: Image37, thumb: Image37, alt: 'Sala Planejada - Estante e rack' },
+        { src: Image40, thumb: Image40, alt: 'Banheiro Planejado - Armário sob medida' },
+        { src: Image46, thumb: Image46, alt: 'Área de Serviço Planejada' },
+        { src: Image51, thumb: Image51, alt: 'Closet Planejado - Organização personalizada' },
+        { src: Image61, thumb: Image61, alt: 'Móveis Planejados - Acabamento premium' },
     ];
 
     return (
-        <section className="h-[calc(100vh-5rem)] bg-gradient-to-b from-white to-gray-50 py-16 flex items-center overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                        O Que Criamos
-                    </h2>
-                    <p className="text-xl text-gray-600">
-                        Conheça alguns dos nossos projetos realizados
+        <div className="h-full bg-gradient-to-b from-gray-50 to-white flex flex-col">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
+                {/* Texto Descritivo */}
+                <div className="text-center mb-8 sm:mb-10">
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                        Conheça alguns dos nossos projetos realizados com dedicação e qualidade.
                     </p>
                 </div>
 
-                <LightGallery
-                    speed={500}
-                    plugins={[lgThumbnail, lgZoom]}
-                    elementClassNames="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-                >
-                    {images.map((image, index) => (
-                        <a
-                            key={index}
-                            data-lg-size="1400-1400"
-                            className="gallery-item overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
-                            href={image.src}
-                        >
-                            <img
-                                alt={image.alt}
-                                src={image.thumb}
-                                className="w-full h-64 object-cover"
-                                loading="lazy"
-                            />
-                        </a>
-                    ))}
-                </LightGallery>
+                {/* Gallery de Imagens */}
+                <div className="flex justify-center mb-8 sm:mb-10">
+                    <LightGallery
+                        speed={500}
+                        plugins={[lgThumbnail, lgZoom]}
+                        elementClassNames="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl"
+                    >
+                        {images.map((image, index) => (
+                            <a
+                                key={index}
+                                data-lg-size="1400-1400"
+                                className="gallery-item overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+                                href={image.src}
+                            >
+                                <div className="relative">
+                                    <img
+                                        alt={image.alt}
+                                        src={image.thumb}
+                                        className="w-full h-32 sm:h-40 lg:h-48 object-cover group-hover:brightness-110 transition-all duration-300"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                        <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+                                            Ver Detalhes
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </LightGallery>
+                </div>
+
+                {/* Botão Call to Action */}
+                <div className="text-center">
+                    <a
+                        href="https://wa.me/5567991146889?text=Olá! Gostaria de solicitar um orçamento para móveis planejados."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg text-sm whitespace-nowrap"
+                    >
+                        Faça um orçamento
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
     );
 }

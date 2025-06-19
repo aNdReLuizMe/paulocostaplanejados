@@ -9,14 +9,16 @@ function App(): JSX.Element {
         <div className='flex flex-col min-h-screen'>
             <NavbarApp />
             <main className="flex-grow">
-                <Hero />
-                <section id="about" className="min-h-screen">
+                <section id="home" className="h-screen">
+                    <Hero />
+                </section>
+                <section id="about" className="h-screen">
                     <AboutUs />
                 </section>
-                <section id="portfolio" className="min-h-screen">
+                <section id="portfolio" className="h-screen">
                     <Portfolio />
                 </section>
-                <section id="location" className="min-h-screen">
+                <section id="location" className="h-screen">
                     <Location />
                 </section>
             </main>

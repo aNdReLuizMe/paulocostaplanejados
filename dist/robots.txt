@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aNdReLuizMe.github.io/paulocostaplanejados/sitemap.xml
+
+# Diretórios principais
+Allow: /assets/
+Allow: /images/
+Allow: /logo/
+
+# Crawl-delay (opcional, ajuda sites menores)
+Crawl-delay: 1
+
+# Prioridades para SEO local
+# Palavras-chave importantes: móveis planejados, Três Lagoas, MS, marcenaria, móveis sob medida 

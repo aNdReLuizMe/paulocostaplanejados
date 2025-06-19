@@ -1,0 +1,33 @@
+{
+  "name": "Paulo Costa Planejados - Móveis Planejados em Três Lagoas/MS",
+  "short_name": "Paulo Costa Planejados",
+  "description": "Há 20 anos criando móveis planejados de qualidade em Três Lagoas/MS. Cozinhas, dormitórios, escritórios e muito mais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon-nobg.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "lifestyle",
+    "shopping"
+  ],
+  "screenshots": [
+    {
+      "src": "/logo/pcplanejados_logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide"
+    }
+  ]
+} 

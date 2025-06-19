@@ -4,10 +4,10 @@ import { Blockquote } from "flowbite-react";
 
 export function TestimonialApp() {
     return (
-        <figure className="text-center">
-            <div className="flex justify-center mb-4">
+        <figure className="text-center px-4 sm:px-6">
+            <div className="flex justify-center mb-4 sm:mb-6">
                 <svg
-                    className="h-10 w-10 text-gray-400 dark:text-gray-600"
+                    className="h-8 w-8 sm:h-10 sm:w-10 text-gray-400"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -17,22 +17,29 @@ export function TestimonialApp() {
                 </svg>
             </div>
             <Blockquote className="mx-auto">
-                <p className="text-2xl font-medium italic text-gray-900 dark:text-white">
-                    "Desenvolvemos soluções personalizadas em móveis planejados para qualquer tipo de ambiente. Basta compartilhar sua visão conosco, e transformaremos seu desejo em realidade."
+                <p className="text-lg sm:text-xl lg:text-2xl font-medium italic text-gray-900 leading-relaxed">
+                    "Desenvolvemos soluções personalizadas em móveis planejados para qualquer tipo de ambiente. 
+                    Basta compartilhar sua visão conosco, e transformaremos seu desejo em realidade com 
+                    qualidade e preços justos."
                 </p>
             </Blockquote>
-            <figcaption className="mt-6 flex items-center justify-center space-x-3">
-                {/* <Avatar
-                    rounded
-                    size="xs"
-                    img="/images/people/profile-picture-5.jpg"
-                    alt="profile picture"
-                /> */}
-                <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <cite className="pr-3 font-medium text-gray-900 dark:text-white">Paulo Costa</cite>
-                    <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">CEO & Diretor de Criação</cite>
+            <figcaption className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3">
+                <div className="flex flex-col sm:flex-row items-center sm:divide-x-2 divide-gray-500">
+                    <cite className="font-semibold text-gray-900 text-base sm:text-lg sm:pr-3">Paulo Costa</cite>
                 </div>
             </figcaption>
-        </figure >
+            
+            {/* Call to Action */}
+            <div className="mt-6 sm:mt-8">
+                <a
+                    href="https://wa.me/5567991146889?text=Olá! Gostaria de conhecer mais sobre os móveis planejados da Paulo Costa."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 hover:shadow-lg text-sm whitespace-nowrap"
+                >
+                    Seja bem vindo!
+                </a>
+            </div>
+        </figure>
     );
 }

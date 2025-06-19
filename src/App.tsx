@@ -3,6 +3,7 @@ import { Hero } from './components/sections/Hero'
 import { Location } from './components/sections/Location'
 import { NavbarApp } from './components/sections/Navbar'
 import { Portfolio } from './components/sections/Portfolio'
+import { FloatingWhatsApp } from './components/common/FloatingWhatsApp'
 
 function App(): JSX.Element {
     return (
@@ -22,6 +23,7 @@ function App(): JSX.Element {
                     <Location />
                 </section>
             </main>
+            <FloatingWhatsApp />
         </div>
     )
 }

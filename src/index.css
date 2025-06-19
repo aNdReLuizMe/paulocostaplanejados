@@ -111,4 +111,22 @@
     width: 100%;
     transition: width 0.3s ease-out;
   }
+
+  /* Animação flutuante para o botão WhatsApp */
+  .floating-bounce {
+    animation: floatingBounce 2s ease-in-out infinite;
+  }
+
+  .group:hover .floating-bounce {
+    animation-play-state: paused;
+  }
+
+  @keyframes floatingBounce {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
 }

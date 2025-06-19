@@ -152,15 +152,7 @@ export function NavbarApp(): JSX.Element {
                             }`}></span>
                         )}
                     </a>
-                    <a
-                        href="https://wa.me/5567991146889"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-green-500 text-white p-2.5 rounded-full hover:bg-green-600 transition-colors duration-300 inline-flex items-center justify-center"
-                        title="Fale conosco no WhatsApp"
-                    >
-                        <WhatsAppIcon />
-                    </a>
+
                 </div>
             </Navbar.Collapse>
         </Navbar>

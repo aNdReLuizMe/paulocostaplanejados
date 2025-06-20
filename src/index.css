@@ -97,6 +97,83 @@
   .dark-mode-transition {
     @apply transition-colors duration-300 ease-in-out;
   }
+
+  /* Correção para botões de navegação do carrossel Flowbite no modo escuro */
+  .dark [data-carousel-prev] span {
+    @apply bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50;
+  }
+
+  .dark [data-carousel-next] span {
+    @apply bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50;
+  }
+
+  .dark [data-carousel-prev] svg,
+  .dark [data-carousel-next] svg {
+    @apply text-white !important;
+  }
+
+  /* Fallback para botões do carrossel que não seguem o padrão Flowbite */
+  .dark .carousel-control-prev,
+  .dark .carousel-control-next {
+    @apply bg-gray-800/60 hover:bg-gray-700/80 border border-gray-600/50;
+  }
+
+  .dark .carousel-control-prev svg,
+  .dark .carousel-control-next svg {
+    @apply text-white !important;
+  }
+
+  /* Estilos específicos para o componente Carousel do Flowbite React */
+  .dark div[class*="group"] span[class*="bg-white"] {
+    @apply bg-gray-800/60 hover:bg-gray-700/80 border border-gray-600/30;
+  }
+
+  .dark div[class*="group"] span[class*="bg-white"] svg {
+    @apply text-white !important;
+  }
+
+  /* Estilos mais específicos e robustos para os botões do carrossel */
+  .dark button[data-testid="carousel-left-control"],
+  .dark button[data-testid="carousel-right-control"] {
+    @apply opacity-100 !important;
+  }
+
+  .dark button[data-testid="carousel-left-control"] span,
+  .dark button[data-testid="carousel-right-control"] span {
+    background-color: rgba(31, 41, 55, 0.85) !important;
+    border: 1px solid rgba(75, 85, 99, 0.7) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .dark button[data-testid="carousel-left-control"] span:hover,
+  .dark button[data-testid="carousel-right-control"] span:hover {
+    background-color: rgba(31, 41, 55, 0.95) !important;
+    border-color: rgba(75, 85, 99, 0.9) !important;
+  }
+
+  .dark button[data-testid="carousel-left-control"] svg,
+  .dark button[data-testid="carousel-right-control"] svg {
+    color: white !important;
+    fill: white !important;
+    stroke: white !important;
+  }
+
+  /* Seletor ainda mais específico para garantir que funcione */
+  .dark .carousel-container button span {
+    background-color: rgba(31, 41, 55, 0.85) !important;
+    border: 1px solid rgba(75, 85, 99, 0.7) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .dark .carousel-container button span:hover {
+    background-color: rgba(31, 41, 55, 0.95) !important;
+  }
+
+  .dark .carousel-container button svg {
+    color: white !important;
+    fill: white !important;
+    stroke: white !important;
+  }
 }
 
 /* Utilities customizados */
@@ -150,5 +227,39 @@
 
   .group:hover .floating-bounce {
     animation-play-state: paused;
+  }
+
+  /* Força visibilidade dos ícones do carrossel no modo escuro */
+  .dark .carousel-navigation-fix {
+    background-color: rgba(31, 41, 55, 0.7) !important;
+    border: 1px solid rgba(75, 85, 99, 0.5) !important;
+  }
+
+  .dark .carousel-navigation-fix:hover {
+    background-color: rgba(31, 41, 55, 0.9) !important;
+  }
+
+  .dark .carousel-navigation-fix svg {
+    color: white !important;
+    fill: white !important;
+  }
+
+  /* Estilo de fallback universal para qualquer botão de carrossel no modo escuro */
+  .dark [class*="carousel"] button {
+    opacity: 1 !important;
+  }
+
+  .dark [class*="carousel"] button span {
+    background-color: rgba(31, 41, 55, 0.85) !important;
+    border: 1px solid rgba(75, 85, 99, 0.7) !important;
+  }
+
+  .dark [class*="carousel"] button span:hover {
+    background-color: rgba(31, 41, 55, 0.95) !important;
+  }
+
+  .dark [class*="carousel"] button svg {
+    color: white !important;
+    fill: white !important;
   }
 }

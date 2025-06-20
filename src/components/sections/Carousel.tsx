@@ -1,5 +1,6 @@
 "use client";
 import { Carousel } from "flowbite-react";
+import { useEffect } from "react";
 
 import Image18 from "../../assets/images/carousel/Image (18).jpeg";
 import Image28 from "../../assets/images/carousel/Image (28).jpeg";
@@ -24,8 +25,59 @@ export function CarouselApp() {
         { src: Image60, alt: "Projeto personalizado Paulo Costa Planejados - qualidade e design" }
     ];
 
+    useEffect(() => {
+        // Criar um estilo inline para corrigir os botões do carrossel no modo escuro
+        const styleId = 'carousel-dark-mode-fix';
+        let existingStyle = document.getElementById(styleId);
+        
+        if (!existingStyle) {
+            const style = document.createElement('style');
+            style.id = styleId;
+            style.textContent = `
+                .dark .carousel-container button span {
+                    background-color: rgba(31, 41, 55, 0.8) !important;
+                    border: 1px solid rgba(75, 85, 99, 0.6) !important;
+                }
+                
+                .dark .carousel-container button span:hover {
+                    background-color: rgba(31, 41, 55, 0.95) !important;
+                }
+                
+                .dark .carousel-container button svg {
+                    color: white !important;
+                    fill: white !important;
+                }
+
+                .dark .carousel-container [data-testid="carousel-left-control"] span,
+                .dark .carousel-container [data-testid="carousel-right-control"] span {
+                    background-color: rgba(31, 41, 55, 0.8) !important;
+                    border: 1px solid rgba(75, 85, 99, 0.6) !important;
+                }
+                
+                .dark .carousel-container [data-testid="carousel-left-control"] span:hover,
+                .dark .carousel-container [data-testid="carousel-right-control"] span:hover {
+                    background-color: rgba(31, 41, 55, 0.95) !important;
+                }
+                
+                .dark .carousel-container [data-testid="carousel-left-control"] svg,
+                .dark .carousel-container [data-testid="carousel-right-control"] svg {
+                    color: white !important;
+                    fill: white !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        return () => {
+            // Cleanup: remover o estilo quando o componente for desmontado
+            if (existingStyle) {
+                existingStyle.remove();
+            }
+        };
+    }, []);
+
     return (
-        <div className="h-full w-full">
+        <div className="h-full w-full carousel-container">
             <Carousel
                 pauseOnHover
                 className="h-full w-full"

@@ -48,12 +48,12 @@ export const Location: FC = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300" aria-labelledby="location-heading">
+        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col" aria-labelledby="location-heading">
             <motion.div
                 ref={ref}
                 initial="hidden"
                 animate={controls}
-                className="h-full flex flex-col"
+                className="flex-1 flex flex-col"
             >
                 {/* Seção Mapa + Informações */}
                 <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
@@ -158,17 +158,19 @@ export const Location: FC = () => {
                         </div>
                     </motion.div>
                 </div>
+            </motion.div>
 
-                {/* Footer Integrado */}
-                <footer className="bg-gray-100 dark:bg-gray-800 border-gray-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)] transition-colors duration-300">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 flex items-center justify-center">
+            {/* Footer no rodapé da seção Location */}
+            <footer className="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 mt-auto">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div className="flex items-center justify-center">
                         {/* Copyright */}
                         <p className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">
                             © {currentYear} Paulo Costa Móveis Planejados. Todos os direitos reservados.
                         </p>
                     </div>
-                </footer>
-            </motion.div>
+                </div>
+            </footer>
         </section>
     );
 };

@@ -130,7 +130,7 @@ export function Portfolio(): JSX.Element {
             "name": "Paulo Costa Planejados",
             "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/"
         },
-        "image": images.map((img, index) => ({
+        "image": images.map((img) => ({
             "@type": "ImageObject",
             "contentUrl": img.src,
             "thumbnailUrl": img.thumb,

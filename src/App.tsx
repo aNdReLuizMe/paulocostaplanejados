@@ -69,7 +69,7 @@ function App(): JSX.Element {
                 >
                     <section 
                         id="home" 
-                        className="xl:h-screen min-h-screen"
+                        className="h-screen"
                         aria-labelledby="hero-heading"
                     >
                         <Hero />

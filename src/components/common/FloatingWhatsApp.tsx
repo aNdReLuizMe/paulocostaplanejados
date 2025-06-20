@@ -49,13 +49,13 @@ export function FloatingWhatsApp(): JSX.Element {
         <div className="fixed bottom-6 right-6 z-50 group">
             {/* Tooltip SEO optimizado */}
             <div 
-                className="absolute bottom-full right-1/2 transform translate-x-1/2 mb-3 px-3 py-2 bg-green-600 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none floating-bounce"
+                className="absolute bottom-full right-1/2 transform translate-x-1/2 mb-3 px-3 py-2 bg-green-600 dark:bg-green-700 text-white text-sm rounded-lg shadow-lg dark:shadow-gray-900 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none floating-bounce"
                 role="tooltip"
                 aria-hidden="true"
             >
                 💬 Converse conosco
                 {/* Seta do tooltip */}
-                <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-green-600"></div>
+                <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-green-600 dark:border-t-green-700"></div>
             </div>
             
             <a
@@ -63,7 +63,7 @@ export function FloatingWhatsApp(): JSX.Element {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleWhatsAppClick}
-                className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center floating-bounce focus:outline-none focus:ring-4 focus:ring-green-300"
+                className="bg-green-500 dark:bg-green-600 text-white p-4 rounded-full shadow-lg dark:shadow-gray-900 hover:bg-green-600 dark:hover:bg-green-700 hover:shadow-xl dark:hover:shadow-gray-800 transition-all duration-300 inline-flex items-center justify-center floating-bounce focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-600"
                 title="Solicitar orçamento via WhatsApp - Paulo Costa Planejados"
                 aria-label="Entrar em contato via WhatsApp para solicitar orçamento de móveis planejados"
                 data-analytics="whatsapp-float-button"

@@ -61,6 +61,42 @@
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
+
+  /* Animação flutuante suave */
+  @keyframes floating-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .floating-bounce {
+    animation: floating-bounce 2s ease-in-out infinite;
+  }
+
+  /* Suavização de transições para dark mode */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Melhoria de contraste para textos no dark mode */
+  .dark .text-contrast {
+    @apply text-gray-100;
+  }
+  
+  /* Sombras customizadas para dark mode */
+  .dark .shadow-custom {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Melhoria de contraste para textos no dark mode */
+  .dark-mode-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
 }
 
 /* Utilities customizados */
@@ -112,21 +148,7 @@
     transition: width 0.3s ease-out;
   }
 
-  /* Animação flutuante para o botão WhatsApp */
-  .floating-bounce {
-    animation: floatingBounce 2s ease-in-out infinite;
-  }
-
   .group:hover .floating-bounce {
     animation-play-state: paused;
-  }
-
-  @keyframes floatingBounce {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
   }
 }

@@ -5,6 +5,7 @@ import { NavbarApp } from './components/sections/Navbar'
 import { Portfolio } from './components/sections/Portfolio'
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp'
 import { SEOHead } from './components/common/SEOHead'
+import { ThemeProvider } from './hooks/useTheme'
 import { useEffect } from 'react'
 
 function App(): JSX.Element {
@@ -36,7 +37,7 @@ function App(): JSX.Element {
     }, []);
 
     return (
-        <>
+        <ThemeProvider>
             {/* SEO Head Component */}
             <SEOHead 
                 title="Paulo Costa Planejados - Móveis Planejados em Três Lagoas/MS | 20 Anos de Experiência"
@@ -45,7 +46,7 @@ function App(): JSX.Element {
                 url="https://aNdReLuizMe.github.io/paulocostaplanejados/"
             />
             
-            <div className='flex flex-col min-h-screen'>
+            <div className='flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300'>
                 {/* Skip Links para acessibilidade */}
                 <a 
                     href="#main-content" 
@@ -140,7 +141,7 @@ function App(): JSX.Element {
                 })}
                 </script>
             </div>
-        </>
+        </ThemeProvider>
     )
 }
 

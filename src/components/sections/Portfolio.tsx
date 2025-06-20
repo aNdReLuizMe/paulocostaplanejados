@@ -150,11 +150,11 @@ export function Portfolio(): JSX.Element {
     };
 
     return (
-        <div className="h-full bg-gradient-to-b from-gray-50 to-white flex flex-col">
+        <div className="h-full bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 flex flex-col transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
                 {/* Heading principal para SEO */}
                 <div className="text-center mb-8 sm:mb-10">
-                    <h2 id="portfolio-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 id="portfolio-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300">
                         Conheça alguns dos nossos projetos realizados
                     </h2>
                 </div>
@@ -177,7 +177,7 @@ export function Portfolio(): JSX.Element {
                             <a
                                 key={index}
                                 data-lg-size="1400-1400"
-                                className="gallery-item overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+                                className="gallery-item overflow-hidden rounded-lg shadow-lg dark:shadow-gray-700 transform transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-600 group"
                                 href={image.src}
                                 onClick={() => handleImageClick(index, image)}
                                 aria-label={`Ver detalhes: ${image.alt}`}

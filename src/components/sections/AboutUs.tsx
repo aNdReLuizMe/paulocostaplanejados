@@ -48,13 +48,13 @@ const Counter = ({ end, label, duration = 2 }: { end: number; label: string; dur
 
     return (
         <div ref={ref} className="p-4 text-center">
-            <h4 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+            <h4 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2 transition-colors duration-300">
                 {count}
                 {end === 20 && '+'} {/* Adiciona o '+' apenas para o número 20 */}
                 {end === 200 && '+'} {/* Adiciona o '+' apenas para o número 200 */}
                 {end === 100 && '%'} {/* Adiciona o '%' apenas para o número 100 */}
             </h4>
-            <p className="text-gray-600 text-sm sm:text-base">{label}</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base transition-colors duration-300">{label}</p>
         </div>
     );
 };
@@ -109,7 +109,7 @@ export function AboutUs(): JSX.Element {
     };
 
     return (
-        <div className="h-full bg-gradient-to-b from-white to-gray-50 flex items-center overflow-hidden">
+        <div className="h-full bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 flex items-center overflow-hidden transition-colors duration-300">
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -118,26 +118,26 @@ export function AboutUs(): JSX.Element {
                 className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8"
             >
                 <motion.div variants={fadeVariants} className="text-center mb-6 sm:mb-8">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300">
                         Tradição em Móveis Planejados
                     </h2>
-                    <p className="text-lg sm:text-xl text-gray-600">
+                    <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 transition-colors duration-300">
                         Há 20 anos transformando sonhos em realidade
                     </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-6">
                     <motion.div variants={leftVariants} className="space-y-4">
-                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                             Nossa História
                         </h3>
-                        <p className="text-gray-600 leading-relaxed text-justify text-sm sm:text-base">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify text-sm sm:text-base transition-colors duration-300">
                             Desde 2004, nós da Paulo Costa Planejados temos nos dedicado à arte da marcenaria,
                             transformando madeira em obras-primas funcionais. Nossa jornada começou
                             em uma pequena oficina, onde o compromisso com a qualidade e a atenção
                             aos detalhes já eram nossa marca registrada.
                         </p>
-                        <p className="text-gray-600 leading-relaxed text-justify text-sm sm:text-base">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify text-sm sm:text-base transition-colors duration-300">
                             Com duas décadas de experiência, desenvolvemos um profundo entendimento
                             das necessidades de nossos clientes, combinando técnicas tradicionais
                             com tecnologia de ponta para criar móveis que são verdadeiras obras de arte.
@@ -145,16 +145,16 @@ export function AboutUs(): JSX.Element {
                     </motion.div>
 
                     <motion.div variants={rightVariants} className="space-y-4">
-                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                             Nosso Compromisso
                         </h3>
-                        <p className="text-gray-600 leading-relaxed text-justify text-sm sm:text-base">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify text-sm sm:text-base transition-colors duration-300">
                             A excelência é nossa obsessão. Cada projeto é tratado com dedicação
                             exclusiva, utilizando materiais premium e técnicas avançadas de
                             fabricação. Nosso compromisso com preços justos não é apenas uma
                             promessa, é parte fundamental de nossa filosofia.
                         </p>
-                        <p className="text-gray-600 leading-relaxed text-justify text-sm sm:text-base">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify text-sm sm:text-base transition-colors duration-300">
                             Acreditamos que móveis planejados de qualidade devem ser acessíveis,
                             por isso trabalhamos incansavelmente para otimizar nossos processos
                             e oferecer o melhor custo-benefício do mercado, sem jamais comprometer

@@ -63,7 +63,7 @@ export const Location: FC = () => {
                     {/* Mapa */}
                     <motion.div
                         variants={leftVariants}
-                        className="p-3 sm:p-4 order-2 lg:order-1 flex items-center justify-center bg-white dark:bg-gray-900"
+                        className="pt-3 px-3 sm:pt-4 sm:px-4 order-2 lg:order-1 flex items-center justify-center bg-white dark:bg-gray-900"
                     >
                         <div className="w-full h-64 sm:h-80 md:h-96 lg:h-full max-h-[500px] lg:max-h-full">
                             <IframeMap

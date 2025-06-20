@@ -41,11 +41,20 @@ export function NavbarApp(): JSX.Element {
             {/* Mobile Layout */}
             <div className="lg:hidden flex items-center justify-between w-full px-4 py-4">
                 <div className="flex items-center ml-10">
-                    <img
-                        className="h-8 transform scale-[6]"
-                        src={theme === 'dark' ? LogoEscuro : LogoClaro}
-                        alt="Paulo Costa Planejados - Logo"
-                    />
+                    <button
+                        onClick={() => {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="focus:outline-none border-none bg-transparent p-0 m-0"
+                        style={{ outline: 'none', border: 'none', boxShadow: 'none' }}
+                        aria-label="Voltar ao topo da página"
+                    >
+                        <img
+                            className="h-8 transform scale-[6]"
+                            src={theme === 'dark' ? LogoEscuro : LogoClaro}
+                            alt="Paulo Costa Planejados - Logo"
+                        />
+                    </button>
                 </div>
                 <button
                     onClick={toggleTheme}

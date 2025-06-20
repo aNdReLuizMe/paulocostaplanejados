@@ -69,7 +69,7 @@ function App(): JSX.Element {
                 >
                     <section 
                         id="home" 
-                        className="lg:h-screen min-h-screen"
+                        className="xl:h-screen min-h-screen"
                         aria-labelledby="hero-heading"
                     >
                         <Hero />
@@ -77,7 +77,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="about" 
-                        className="lg:h-screen min-h-screen"
+                        className="xl:h-screen min-h-screen"
                         aria-labelledby="about-heading"
                     >
                         <AboutUs />
@@ -85,7 +85,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="portfolio" 
-                        className="lg:h-screen min-h-screen"
+                        className="xl:h-screen min-h-screen"
                         aria-labelledby="portfolio-heading"
                     >
                         <Portfolio />
@@ -93,7 +93,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="location" 
-                        className="lg:h-screen min-h-screen"
+                        className="xl:h-screen min-h-screen"
                         aria-labelledby="location-heading"
                     >
                         <Location />

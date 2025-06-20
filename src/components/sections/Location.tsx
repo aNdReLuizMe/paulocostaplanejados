@@ -48,7 +48,7 @@ export const Location: FC = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col mt-8 lg:mt-0" aria-labelledby="location-heading">
+        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col mt-8 xl:mt-0" aria-labelledby="location-heading">
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -56,14 +56,14 @@ export const Location: FC = () => {
                 className="flex-1 flex flex-col"
             >
                 {/* Seção Mapa + Informações */}
-                <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
+                <div className="flex-1 grid grid-cols-1 xl:grid-cols-2 min-h-[calc(100vh-5rem)]">
                     <header className="sr-only">
                         <h2 id="location-heading">Nossa Localização e Contato</h2>
                     </header>
                     {/* Mapa */}
                     <motion.div
                         variants={leftVariants}
-                        className="p-4 sm:p-6 md:p-8 order-2 lg:order-1 flex items-center justify-center bg-white dark:bg-gray-900"
+                        className="p-4 sm:p-6 md:p-8 order-2 xl:order-1 flex items-center justify-center bg-white dark:bg-gray-900"
                     >
                         <div className="w-[90%] h-56 sm:h-72 md:h-80 lg:h-[80%] max-h-[400px] lg:max-h-[80%]">
                             <IframeMap
@@ -83,10 +83,10 @@ export const Location: FC = () => {
                     {/* Informações de Contato */}
                     <motion.div
                         variants={rightVariants}
-                        className="flex items-center justify-center p-3 xs:p-4 sm:p-6 lg:p-8 order-1 lg:order-2 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+                        className="flex items-center justify-center p-3 xs:p-4 sm:p-6 xl:p-8 order-1 xl:order-2 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
                     >
                         <div className="space-y-3 xs:space-y-4 sm:space-y-6 max-w-lg w-full">
-                            <header className="text-center lg:text-left">
+                            <header className="text-center xl:text-left">
                                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                                     Venha nos conhecer
                                 </h3>

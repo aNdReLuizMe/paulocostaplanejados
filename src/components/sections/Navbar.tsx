@@ -39,8 +39,8 @@ export function NavbarApp(): JSX.Element {
     return (
         <Navbar className="h-20 shadow-lg fixed top-0 w-full z-50 bg-white dark:bg-gray-800 transition-colors duration-300">
             {/* Mobile Layout */}
-            <div className="lg:hidden flex items-center justify-between w-full px-4 py-4">
-                <div className="flex items-center ml-10">
+            <div className="xl:hidden flex items-center justify-between w-full px-4 py-4">
+                <div className="flex items-center ml-16">
                     <button
                         onClick={() => {
                             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -87,7 +87,7 @@ export function NavbarApp(): JSX.Element {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:flex lg:items-center lg:justify-between lg:w-full">
+            <div className="hidden xl:flex xl:items-center xl:justify-between xl:w-full">
                 <Navbar.Brand className="flex items-center justify-center">
                     <img
                         className="h-8 sm:h-10 md:h-12 transform scale-[6] flex items-center justify-center mt-3"

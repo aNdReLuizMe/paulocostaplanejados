@@ -17,7 +17,7 @@
   }
 
   /* Scroll snap para seções perfeitas - apenas em desktop */
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     main {
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
@@ -32,7 +32,7 @@
   }
 
   /* Mobile: scroll livre sem snap */
-  @media (max-width: 1023px) {
+  @media (max-width: 1279px) {
     main {
       overflow-y: auto;
       height: auto;

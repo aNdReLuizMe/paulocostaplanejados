@@ -16,17 +16,34 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Scroll snap para seções perfeitas */
-  main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+  /* Scroll snap para seções perfeitas - apenas em desktop */
+  @media (min-width: 1024px) {
+    main {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
+    section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      scroll-margin-top: 0;
+    }
   }
 
-  section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    scroll-margin-top: 0;
+  /* Mobile: scroll livre sem snap */
+  @media (max-width: 1023px) {
+    main {
+      overflow-y: auto;
+      height: auto;
+      scroll-snap-type: none;
+    }
+
+    section {
+      scroll-snap-align: none;
+      scroll-snap-stop: normal;
+      scroll-margin-top: 5rem; /* Para compensar navbar fixa */
+    }
   }
 
   /* Melhorar performance de animações */

@@ -48,7 +48,7 @@ export const Location: FC = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col" aria-labelledby="location-heading">
+        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col mt-8 lg:mt-0" aria-labelledby="location-heading">
             <motion.div
                 ref={ref}
                 initial="hidden"

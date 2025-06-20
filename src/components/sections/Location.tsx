@@ -163,10 +163,13 @@ export const Location: FC = () => {
             {/* Footer no rodapé da seção Location */}
             <footer className="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 mt-auto">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex items-center justify-center">
+                    <div className="flex flex-col items-center justify-center text-center space-y-1 sm:space-y-0">
                         {/* Copyright */}
                         <p className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">
-                            © {currentYear} Paulo Costa Móveis Planejados. Todos os direitos reservados.
+                            © {currentYear} Paulo Costa Móveis Planejados.
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 text-xs transition-colors duration-300">
+                            Todos os direitos reservados.
                         </p>
                     </div>
                 </div>

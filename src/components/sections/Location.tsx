@@ -67,7 +67,7 @@ export const Location: FC = () => {
                     >
                         <div className="w-[90%] h-56 sm:h-72 md:h-80 lg:h-[80%] max-h-[400px] lg:max-h-[80%]">
                             <IframeMap
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.5886095732517!2d-51.700339!3d-20.8079248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949098173cca9d87%3A0xe2e9759cf2555fa4!2sR.%20Santiago%20Manoel%20Fern%C3%A1ndez%2C%202332%20-%20Vila%20Zuque%2C%20Tr%C3%AAs%20Lagoas%20-%20MS%2C%2079620-378!5e0!3m2!1spt-BR!2sbr!4v1732745251656!5m2!1spt-BR!2sbr"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.5886095732517!2d-51.700339!3d-20.8079248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949098173cca9d87%3A0xe2e9759cf2555fa4!2sR.%20Santiago%20Manoel%20Fern%C3%A1ndez%2C%202260%20-%20Vila%20Zuque%2C%20Tr%C3%AAs%20Lagoas%20-%20MS%2C%2079620-378!5e0!3m2!1spt-BR!2sbr!4v1732745251656!5m2!1spt-BR!2sbr"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -99,7 +99,7 @@ export const Location: FC = () => {
                                     <div>
                                         <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 text-xs sm:text-sm transition-colors duration-300">Endereço</h4>
                                         <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed transition-colors duration-300">
-                                            Rua Santiago Manoel Fernández, 2332<br />
+                                            Rua Santiago Manoel Fernández, 2260<br />
                                             Bairro Nova Três Lagoas 2<br />
                                             CEP: 79620-378<br />
                                             Três Lagoas/MS - Brasil

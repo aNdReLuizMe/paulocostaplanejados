@@ -13,7 +13,7 @@ export const analyticsConfig = {
   
   // Configurações de negócio
   WHATSAPP_NUMBER: import.meta.env.VITE_WHATSAPP_NUMBER || '5567991146889',
-  BUSINESS_ADDRESS: import.meta.env.VITE_BUSINESS_ADDRESS || 'Rua Santiago Manoel Fernández, 2332, Três Lagoas, MS',
+  BUSINESS_ADDRESS: import.meta.env.VITE_BUSINESS_ADDRESS || 'Rua Santiago Manoel Fernández, 2260, Três Lagoas, MS',
   
   // SEO
   CANONICAL_URL: import.meta.env.VITE_CANONICAL_URL || 'https://aNdReLuizMe.github.io/paulocostaplanejados',

@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 export function SEOHead({
-  title = "Paulo Costa Planejados - Móveis Planejados em Três Lagoas/MS | 20 Anos de Experiência",
+  title = "Paulo Costa Planejados - Móveis Planejados em Três Lagoas - MS",
   description = "Paulo Costa Planejados: 20 anos criando móveis planejados de qualidade em Três Lagoas/MS. Cozinhas, dormitórios, escritórios e muito mais. Orçamento gratuito! ⭐⭐⭐⭐⭐",
   keywords = "móveis planejados três lagoas, móveis sob medida três lagoas, cozinha planejada três lagoas, marcenaria três lagoas ms, guarda roupa planejado, móveis sob medida mato grosso do sul",
   image = "https://aNdReLuizMe.github.io/paulocostaplanejados/logo/pcplanejados_logo.png",

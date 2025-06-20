@@ -40,7 +40,7 @@ function App(): JSX.Element {
         <ThemeProvider>
             {/* SEO Head Component */}
             <SEOHead 
-                title="Paulo Costa Planejados - Móveis Planejados em Três Lagoas/MS | 20 Anos de Experiência"
+                title="Paulo Costa Planejados - Móveis Planejados em Três Lagoas - MS"
                 description="Paulo Costa Planejados: 20 anos criando móveis planejados de qualidade em Três Lagoas/MS. Cozinhas, dormitórios, escritórios e muito mais. Orçamento gratuito! ⭐⭐⭐⭐⭐"
                 keywords="móveis planejados três lagoas, móveis sob medida três lagoas, cozinha planejada três lagoas, marcenaria três lagoas ms, guarda roupa planejado"
                 url="https://aNdReLuizMe.github.io/paulocostaplanejados/"

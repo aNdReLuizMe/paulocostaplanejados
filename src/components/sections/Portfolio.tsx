@@ -37,58 +37,58 @@ export function Portfolio(): JSX.Element {
         {
             src: Image54,
             thumb: Image54,
-            alt: 'Cozinha Planejada - Móveis sob medida Paulo Costa',
-            category: 'cozinha',
-            description: 'Cozinha planejada com bancada em granito e armários em MDF'
+            alt: 'Armários Planejados - Paulo Costa Planejados móveis sob medida',
+            category: 'armarios',
+            description: 'Armário planejado em MDF'
         },
         {
             src: Image2,
             thumb: Image2,
-            alt: 'Dormitório Planejado - Guarda-roupa personalizado Paulo Costa',
-            category: 'dormitorio',
-            description: 'Dormitório completo com guarda-roupa, criado-mudo e cabeceira planejados'
+            alt: 'Painel Planejado - Paulo Costa Planejados móveis sob medida',
+            category: 'paineis',
+            description: 'Painel com armário planejado'
         },
         {
             src: Image31,
             thumb: Image31,
-            alt: 'Escritório Planejado - Mesa e estantes Paulo Costa',
-            category: 'escritorio',
-            description: 'Home office funcional com mesa, estantes e gavetas planejadas'
+            alt: 'Sala Planejada - Paulo Costa Planejados móveis sob medida',
+            category: 'paineis',
+            description: 'Painel para televisão com luz led integrada'
         },
         {
             src: Image37,
             thumb: Image37,
-            alt: 'Sala Planejada - Estante e rack Paulo Costa',
-            category: 'sala',
-            description: 'Sala de estar com rack e estante para TV sob medida'
+            alt: 'Cozinha Planejada - Paulo Costa Planejados móveis sob medida',
+            category: 'cozinha',
+            description: 'Armários de cozinha com luz led integrada'
         },
         {
             src: Image40,
             thumb: Image40,
-            alt: 'Banheiro Planejado - Armário sob medida Paulo Costa',
-            category: 'banheiro',
-            description: 'Banheiro planejado com armário e espelheira personalizados'
+            alt: 'Cozinha Planejado - Paulo Costa Planejados móveis sob medida',
+            category: 'cozinha',
+            description: 'Armários aéreos e térreos com acabamento fino em mármore ou granito'
         },
         {
             src: Image46,
             thumb: Image46,
-            alt: 'Área de Serviço Planejada Paulo Costa',
-            category: 'area-servico',
-            description: 'Área de serviço otimizada com armários e tanque planejados'
+            alt: 'Sala de televisão Planejada - Paulo Costa Planejados móveis sob medida',
+            category: 'sala',
+            description: 'Painéis de parede, hack e armários auxiliares com luz led integrada'
         },
         {
             src: Image51,
             thumb: Image51,
-            alt: 'Closet Planejado - Organização personalizada Paulo Costa',
-            category: 'closet',
-            description: 'Closet planejado com sistema de organização completo'
+            alt: 'Ilha Planejada - Paulo Costa Planejados móveis sob medida',
+            category: 'ilha',
+            description: 'Ilha com acabamento em MDF alto padrão'
         },
         {
             src: Image61,
             thumb: Image61,
-            alt: 'Móveis Planejados - Acabamento premium Paulo Costa',
+            alt: 'Móveis Planejados - Paulo Costa Planejados móveis sob medida',
             category: 'premium',
-            description: 'Móveis planejados com acabamento premium e detalhes únicos'
+            description: 'Armário com perfis de espaços embutidos e detalhes únicos'
         },
     ];
 

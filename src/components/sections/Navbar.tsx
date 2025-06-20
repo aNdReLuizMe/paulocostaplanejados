@@ -39,10 +39,10 @@ export function NavbarApp(): JSX.Element {
     return (
         <Navbar className="h-20 shadow-lg fixed top-0 w-full z-50 bg-white dark:bg-gray-800 transition-colors duration-300">
             {/* Mobile Layout */}
-            <div className="lg:hidden flex items-center justify-between w-full px-4">
+            <div className="lg:hidden flex items-center justify-between w-full px-4 py-4">
                 <div className="flex items-center ml-10">
                     <img
-                        className="h-8 transform scale-[6] mt-2"
+                        className="h-8 transform scale-[6]"
                         src={theme === 'dark' ? LogoEscuro : LogoClaro}
                         alt="Paulo Costa Planejados - Logo"
                     />

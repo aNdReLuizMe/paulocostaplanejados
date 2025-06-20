@@ -48,7 +48,7 @@ export const Location: FC = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <section className="min-h-screen bg-white dark:bg-gray-900 overflow-hidden transition-colors duration-300 flex flex-col" aria-labelledby="location-heading">
+        <section className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 flex flex-col" aria-labelledby="location-heading">
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -56,7 +56,7 @@ export const Location: FC = () => {
                 className="flex-1 flex flex-col"
             >
                 {/* Seção Mapa + Informações */}
-                <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
+                <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] lg:min-h-[calc(100vh-10rem)]">
                     <header className="sr-only">
                         <h2 id="location-heading">Nossa Localização e Contato</h2>
                     </header>

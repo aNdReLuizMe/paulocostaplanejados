@@ -64,12 +64,12 @@ function App(): JSX.Element {
                 {/* Main content */}
                 <main 
                     id="main-content" 
-                    className="flex-grow"
+                    className="flex-grow pt-20"
                     role="main"
                 >
                     <section 
                         id="home" 
-                        className="h-screen"
+                        className="min-h-screen"
                         aria-labelledby="hero-heading"
                     >
                         <Hero />
@@ -77,7 +77,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="about" 
-                        className="h-screen"
+                        className="min-h-screen"
                         aria-labelledby="about-heading"
                     >
                         <AboutUs />
@@ -85,7 +85,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="portfolio" 
-                        className="h-screen"
+                        className="min-h-screen"
                         aria-labelledby="portfolio-heading"
                     >
                         <Portfolio />
@@ -93,7 +93,7 @@ function App(): JSX.Element {
                     
                     <section 
                         id="location" 
-                        className="h-screen"
+                        className="min-h-screen"
                         aria-labelledby="location-heading"
                     >
                         <Location />

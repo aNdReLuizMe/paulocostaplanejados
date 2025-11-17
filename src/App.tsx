@@ -43,7 +43,7 @@ function App(): JSX.Element {
                 title="Paulo Costa Planejados - Móveis Planejados em Três Lagoas - MS"
                 description="Paulo Costa Planejados: 20 anos criando móveis planejados de qualidade em Três Lagoas/MS. Cozinhas, dormitórios, escritórios e muito mais. Orçamento gratuito! ⭐⭐⭐⭐⭐"
                 keywords="móveis planejados três lagoas, móveis sob medida três lagoas, cozinha planejada três lagoas, marcenaria três lagoas ms, guarda roupa planejado"
-                url="https://aNdReLuizMe.github.io/paulocostaplanejados/"
+                url="https://paulocostaplanejados.com.br/"
             />
             
             <div className='flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300'>
@@ -114,28 +114,28 @@ function App(): JSX.Element {
                             "position": 1,
                             "name": "Home",
                             "description": "Página inicial da Paulo Costa Planejados",
-                            "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/#home"
+                            "url": "https://paulocostaplanejados.com.br/#home"
                         },
                         {
                             "@type": "SiteNavigationElement", 
                             "position": 2,
                             "name": "Sobre Nós",
                             "description": "Conheça nossa história e experiência em móveis planejados",
-                            "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/#about"
+                            "url": "https://paulocostaplanejados.com.br/#about"
                         },
                         {
                             "@type": "SiteNavigationElement",
                             "position": 3, 
                             "name": "Portfólio",
                             "description": "Veja nossos trabalhos e projetos realizados",
-                            "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/#portfolio"
+                            "url": "https://paulocostaplanejados.com.br/#portfolio"
                         },
                         {
                             "@type": "SiteNavigationElement",
                             "position": 4,
                             "name": "Localização e Contato",
                             "description": "Encontre nossa loja e entre em contato",
-                            "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/#location"
+                            "url": "https://paulocostaplanejados.com.br/#location"
                         }
                     ]
                 })}

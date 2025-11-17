@@ -7,7 +7,7 @@ export const analyticsConfig = {
   GTM_ID: import.meta.env.VITE_GTM_ID || 'GTM-XXXXXXX',
   
   // Configurações do site
-  SITE_URL: import.meta.env.VITE_APP_URL || 'https://aNdReLuizMe.github.io/paulocostaplanejados',
+  SITE_URL: import.meta.env.VITE_APP_URL || 'https://paulocostaplanejados.com.br',
   SITE_NAME: import.meta.env.VITE_APP_NAME || 'Paulo Costa Planejados',
   SITE_DESCRIPTION: import.meta.env.VITE_APP_DESCRIPTION || 'Móveis planejados de qualidade em Três Lagoas/MS',
   
@@ -16,8 +16,8 @@ export const analyticsConfig = {
   BUSINESS_ADDRESS: import.meta.env.VITE_BUSINESS_ADDRESS || 'Rua Santiago Manoel Fernández, 2260, Três Lagoas, MS',
   
   // SEO
-  CANONICAL_URL: import.meta.env.VITE_CANONICAL_URL || 'https://aNdReLuizMe.github.io/paulocostaplanejados',
-  OG_IMAGE: import.meta.env.VITE_OG_IMAGE || 'https://aNdReLuizMe.github.io/paulocostaplanejados/logo/pcplanejados_logo.png',
+  CANONICAL_URL: import.meta.env.VITE_CANONICAL_URL || 'https://paulocostaplanejados.com.br',
+  OG_IMAGE: import.meta.env.VITE_OG_IMAGE || 'https://paulocostaplanejados.com.br/logo/pcplanejados_logo.png',
   
   // Configurações de tracking
   enableTracking: import.meta.env.PROD, // Só ativa tracking em produção

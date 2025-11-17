@@ -128,7 +128,7 @@ export function Portfolio(): JSX.Element {
         "creator": {
             "@type": "LocalBusiness",
             "name": "Paulo Costa Planejados",
-            "url": "https://aNdReLuizMe.github.io/paulocostaplanejados/"
+            "url": "https://paulocostaplanejados.com.br/"
         },
         "image": images.map((img) => ({
             "@type": "ImageObject",

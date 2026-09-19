@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.3",
-    "flowbite-react": "^0.10.2",
+    "flowbite-react": "^0.12.17",
     "framer-motion": "^11.12.0",
     "gh-pages": "^6.3.0",
     "lightgallery": "^2.8.1",

@@ -7,33 +7,13 @@ import { FloatingWhatsApp } from './components/common/FloatingWhatsApp'
 import { SEOHead } from './components/common/SEOHead'
 import { ThemeProvider } from './hooks/useTheme'
 import { useEffect } from 'react'
+import { initializeGA, initializeGTM } from './config/analytics'
 
 function App(): JSX.Element {
 
     useEffect(() => {
-        // Configurar analytics no carregamento da aplicação
-        if (typeof window !== 'undefined') {
-            // Inicializar dataLayer para GTM
-            (window as any).dataLayer = (window as any).dataLayer || [];
-            
-            // Track página inicial
-            if ((window as any).gtag) {
-                (window as any).gtag('config', 'GA_TRACKING_ID', {
-                    page_title: 'Paulo Costa Planejados - Home',
-                    page_location: window.location.href,
-                    custom_map: {
-                        'custom_parameter_1': 'business_type',
-                        'custom_parameter_2': 'location'
-                    }
-                });
-
-                (window as any).gtag('event', 'page_view', {
-                    business_type: 'móveis_planejados',
-                    location: 'três_lagoas_ms',
-                    page_category: 'home'
-                });
-            }
-        }
+        initializeGTM()
+        initializeGA()
     }, []);
 
     return (

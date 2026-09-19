@@ -105,8 +105,8 @@ export function Portfolio(): JSX.Element {
         });
 
         // Enhanced ecommerce tracking
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'select_content', {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'select_content', {
                 content_type: 'portfolio_image',
                 content_id: `portfolio_${index}_${image.category}`,
                 items: [{

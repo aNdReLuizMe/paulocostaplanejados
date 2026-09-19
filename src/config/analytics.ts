@@ -1,10 +1,10 @@
 // Configurações do Google Analytics e Google Tag Manager
 export const analyticsConfig = {
   // Google Analytics 4
-  GA_TRACKING_ID: import.meta.env.VITE_GA_TRACKING_ID || 'GA_MEASUREMENT_ID',
+  GA_TRACKING_ID: import.meta.env.VITE_GA_TRACKING_ID || 'G-Y0BH95BRFK',
   
   // Google Tag Manager
-  GTM_ID: import.meta.env.VITE_GTM_ID || 'GTM-XXXXXXX',
+  GTM_ID: import.meta.env.VITE_GTM_ID || 'GTM-P5X8HLDT',
   
   // Configurações do site
   SITE_URL: import.meta.env.VITE_APP_URL || 'https://paulocostaplanejados.com.br',
@@ -45,6 +45,19 @@ export const analyticsConfig = {
   }
 };
 
+const isGoogleAnalyticsId = (value: string): boolean => /^G-[A-Z0-9]+$/i.test(value);
+const isGoogleTagManagerId = (value: string): boolean => /^GTM-[A-Z0-9]+$/i.test(value);
+
+const appendExternalScript = (id: string, src: string): void => {
+  if (document.getElementById(id)) return;
+
+  const script = document.createElement('script');
+  script.id = id;
+  script.async = true;
+  script.src = src;
+  document.head.appendChild(script);
+};
+
 // Função para inicializar Google Analytics
 export const initializeGA = () => {
   if (!analyticsConfig.enableTracking) {
@@ -52,18 +65,23 @@ export const initializeGA = () => {
     return;
   }
 
+  if (!isGoogleAnalyticsId(analyticsConfig.GA_TRACKING_ID)) {
+    console.warn('Google Analytics não foi inicializado: identificador inválido.');
+    return;
+  }
+
   // Carregar gtag
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.GA_TRACKING_ID}`;
-  document.head.appendChild(script);
+  appendExternalScript(
+    'google-analytics-script',
+    `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsConfig.GA_TRACKING_ID)}`
+  );
 
   // Configurar gtag
-  (window as any).dataLayer = (window as any).dataLayer || [];
-  const gtag = (...args: any[]) => {
-    (window as any).dataLayer.push(args);
+  const dataLayer = window.dataLayer ?? (window.dataLayer = []);
+  const gtag = (...args: unknown[]): void => {
+    dataLayer.push(args);
   };
-  (window as any).gtag = gtag;
+  window.gtag = gtag;
 
   gtag('js', new Date());
   gtag('config', analyticsConfig.GA_TRACKING_ID, {
@@ -94,23 +112,21 @@ export const initializeGA = () => {
 export const initializeGTM = () => {
   if (!analyticsConfig.enableTracking) return;
 
-  // GTM script
-  const gtmScript = `
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','${analyticsConfig.GTM_ID}');
-  `;
+  if (!isGoogleTagManagerId(analyticsConfig.GTM_ID)) {
+    console.warn('Google Tag Manager não foi inicializado: identificador inválido.');
+    return;
+  }
 
-  const script = document.createElement('script');
-  script.innerHTML = gtmScript;
-  document.head.appendChild(script);
-
-  // GTM noscript
-  const noscript = document.createElement('noscript');
-  noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${analyticsConfig.GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
-  document.body.insertBefore(noscript, document.body.firstChild);
+  // A validação do identificador e a criação por DOM evitam interpretar valores de ambiente como HTML.
+  const dataLayer = window.dataLayer ?? (window.dataLayer = []);
+  dataLayer.push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
+  });
+  appendExternalScript(
+    'google-tag-manager-script',
+    `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(analyticsConfig.GTM_ID)}`
+  );
 
   if (analyticsConfig.debugMode) {
     console.log('🏷️ Google Tag Manager inicializado:', analyticsConfig.GTM_ID);
@@ -118,7 +134,7 @@ export const initializeGTM = () => {
 };
 
 // Função para tracking de eventos de negócio
-export const trackBusinessEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+export const trackBusinessEvent = (eventName: string, parameters: Record<string, unknown> = {}) => {
   if (!analyticsConfig.enableTracking) {
     if (analyticsConfig.debugMode) {
       console.log('📈 Event tracked (dev):', eventName, parameters);
@@ -127,8 +143,8 @@ export const trackBusinessEvent = (eventName: string, parameters: Record<string,
   }
 
   // Google Analytics
-  if ((window as any).gtag) {
-    (window as any).gtag('event', eventName, {
+  if (window.gtag) {
+    window.gtag('event', eventName, {
       event_category: parameters.category || 'engagement',
       event_label: parameters.label || '',
       value: parameters.value || 0,
@@ -138,8 +154,8 @@ export const trackBusinessEvent = (eventName: string, parameters: Record<string,
   }
 
   // Google Tag Manager
-  if ((window as any).dataLayer) {
-    (window as any).dataLayer.push({
+  if (window.dataLayer) {
+    window.dataLayer.push({
       event: eventName,
       ...parameters,
       timestamp: new Date().toISOString(),
@@ -164,11 +180,11 @@ export const trackConversion = (conversionType: string, value?: number) => {
   });
 
   // Enhanced ecommerce para conversão
-  if ((window as any).gtag) {
-    (window as any).gtag('event', 'generate_lead', {
+  if (window.gtag) {
+    window.gtag('event', 'generate_lead', {
       currency: analyticsConfig.ecommerce.currency,
       value: conversionValue * analyticsConfig.ecommerce.defaultValue,
       lead_source: conversionType
     });
   }
-}; 
+};

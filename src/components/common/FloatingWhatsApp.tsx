@@ -36,8 +36,8 @@ export function FloatingWhatsApp(): JSX.Element {
         });
 
         // Google Analytics enhanced ecommerce
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'generate_lead', {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'generate_lead', {
                 currency: 'BRL',
                 value: 1500, // Valor médio estimado de um projeto
                 lead_source: 'whatsapp_float'
@@ -84,4 +84,4 @@ export function FloatingWhatsApp(): JSX.Element {
             </a>
         </div>
     );
-} 
+}

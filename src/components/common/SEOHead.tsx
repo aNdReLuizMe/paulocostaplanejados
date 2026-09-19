@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { analyticsConfig } from '../../config/analytics';
 
 interface SEOProps {
   title?: string;
@@ -77,16 +78,16 @@ export function SEOHead({
 
   const trackPageView = (url: string, title: string) => {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_TRACKING_ID', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', analyticsConfig.GA_TRACKING_ID, {
         page_title: title,
         page_location: url
       });
     }
 
     // Google Tag Manager
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: 'page_view',
         page_title: title,
         page_location: url
@@ -101,13 +102,13 @@ export function SEOHead({
 export const useAnalytics = () => {
   const trackEvent = (eventName: string, parameters: object = {}) => {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
     }
 
     // Google Tag Manager
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
         event: eventName,
         ...parameters
       });
@@ -151,4 +152,4 @@ export const useAnalytics = () => {
     trackPortfolioView,
     trackFormSubmit
   };
-}; 
+};

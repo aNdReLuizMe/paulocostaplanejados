@@ -28,7 +28,7 @@ export function CarouselApp() {
     useEffect(() => {
         // Criar um estilo inline para corrigir os botões do carrossel no modo escuro
         const styleId = 'carousel-dark-mode-fix';
-        let existingStyle = document.getElementById(styleId);
+        const existingStyle = document.getElementById(styleId);
         
         if (!existingStyle) {
             const style = document.createElement('style');
